@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elina Khadka | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Elina<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="javascript:void(0)" onclick="openAbout()">About</a></li>
+            <li><a href="https://github.com/khadkaelina456" target="_blank">Projects</a></li>
+            <li><a href="https://www.linkedin.com/in/elina-khadka-33b365319" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <p class="role-tag">SOFTWARE DEVELOPER</p>
+            <h1>Hello, I'm <br>Elina Khadka</h1>
+            
+            <div class="bio-status">
+                <span class="status-line"></span>
+                <p>QA Enthusiast | Management & IT Student | Quality-Focused</p>
+            </div>
+            
+            <p class="description">
+                I live in Ghorahi-15, Dang. I am a detail-oriented professional 
+                dedicated to building efficient digital solutions and ensuring 
+                high-quality software standards.
+            </p>
+            
+            <div class="hero-btns">
+                <a href="https://github.com/khadkaelina456" target="_blank" class="btn-primary">Projects</a>
+                <a href="https://www.linkedin.com/in/elina-khadka-33b365319" target="_blank" class="btn-primary">LinkedIn</a>
+            </div>
+        </div>
+        
+        <div class="hero-image-container">
+            <div class="blob-shape">
+                <img src="C:\Users\Acer\OneDrive\Pictures\Saved Pictures\IMG_3784.jpg" alt="Elina Khadka" class="profile-img">
+            </div>
+        </div>
+    </main>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAbout()">&times;</span>
+            <h2>About & Contact</h2>
+            <hr>
+            <p><strong>Email:</strong> elinakhadka02@gmail.com</p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/elina.khadka.330417" target="_blank">Elina Khadka</a></p>
+            <p><strong>GitHub:</strong> khadkaelina456</p>
+        </div>
+    </div>
+
+    <script>
+        function openAbout() { document.getElementById("aboutModal").style.display = "flex"; }
+        function closeAbout() { document.getElementById("aboutModal").style.display = "none"; }
+        // Close if clicking outside the box
+        window.onclick = function(event) {
+            let modal = document.getElementById("aboutModal");
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+:root {
+    --bg-color: #fefaf0;
+    --brand-yellow: #f4b400;
+    --navy-primary: #1e293b; 
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-color); overflow-x: hidden; }
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; padding: 2rem 10%; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 800; }
+.logo span { color: var(--brand-yellow); }
+.nav-links { display: flex; list-style: none; gap: 3rem; }
+.nav-links a { text-decoration: none; color: var(--navy-primary); font-weight: 700; cursor: pointer; }
+
+/* Hero Section */
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 0 10% 5% 10%; min-height: 85vh; }
+h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -2px; }
+.role-tag { color: var(--brand-yellow); font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem; }
+.bio-status { display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; }
+.status-line { height: 30px; width: 4px; background-color: var(--brand-yellow); }
+.description { color: var(--text-muted); max-width: 500px; margin-bottom: 2.5rem; }
+
+/* Buttons */
+.hero-btns { display: flex; gap: 1.2rem; }
+.btn-primary { background-color: var(--navy-primary); color: #fff; padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+.btn-primary:hover { background-color: var(--brand-yellow); color: var(--navy-primary); }
+
+/* --- HIDDEN ABOUT POP-UP STYLES --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center; align-items: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    width: 90%; max-width: 400px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.modal-content h2 { margin-bottom: 1rem; color: var(--navy-primary); }
+.modal-content p { margin: 10px 0; font-size: 1.1rem; }
+.modal-content hr { margin-bottom: 15px; border: 0; border-top: 1px solid #eee; }
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 2rem; cursor: pointer; color: #888; }
+
+/* --- IMAGE SIZE (AVERAGE) --- */
+.blob-shape {
+    background-color: var(--brand-yellow);
+    width: 350px; height: 420px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    position: relative; display: flex; align-items: flex-end; justify-content: center;
+    overflow: hidden; 
+}
+.profile-img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 20%; 
+}
+
+@media (max-width: 1024px) {
+    .hero { flex-direction: column; text-align: center; }
+    .blob-shape { width: 280px; height: 340px; margin-top: 3rem; }
+}
